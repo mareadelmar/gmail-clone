@@ -5,9 +5,9 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { Container, Tab, TabTitle } from "./style.js";
 
 const EMAIL_TABS = [
-	{ title: "Recibidos", icon: InboxIcon },
-	{ title: "Social", icon: PeopleIcon },
-	{ title: "Promociones", icon: LocalOfferIcon },
+	{ title: "Recibidos", icon: InboxIcon, defaultSelect: true },
+	{ title: "Social", icon: PeopleIcon, defaultSelect: false },
+	{ title: "Promociones", icon: LocalOfferIcon, defaultSelect: false },
 ];
 
 const EmailTab = ({
@@ -19,7 +19,7 @@ const EmailTab = ({
 	selected: boolean;
 }) => {
 	return (
-		<Tab>
+		<Tab selected={selected}>
 			<Icon />
 			<TabTitle>{title}</TabTitle>
 		</Tab>
@@ -27,15 +27,14 @@ const EmailTab = ({
 };
 
 const EmailTabs = () => {
-	const [selectedTab, setSelectedTab] = useState(false);
-
+	//const [selectedTab, setSelectedTab] = useState(false);
 	return (
 		<Container>
 			{EMAIL_TABS.map(item => (
 				<EmailTab
 					Icon={item.icon}
 					title={item.title}
-					selected={selectedTab}
+					selected={item.defaultSelect}
 				/>
 			))}
 		</Container>

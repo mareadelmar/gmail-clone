@@ -1,4 +1,4 @@
-import { Button } from "./style.js";
+import { Container, Button } from "./style.js";
 import AddIcon from "@mui/icons-material/Add";
 import SidebarItem from "./SidebarItem";
 import InboxIcon from "@mui/icons-material/Inbox";
@@ -21,8 +21,8 @@ const SIDEBAR_ITEMS = [
 
 const Sidebar = () => {
 	return (
-		<aside>
-			<Button startIcon={<AddIcon />}>Compose</Button>
+		<Container>
+			<Button startIcon={<AddIcon />}>Redactar</Button>
 			<div>
 				<SidebarItem
 					Icon={InboxIcon}
@@ -44,7 +44,7 @@ const Sidebar = () => {
 				/>
 				<SidebarItem Icon={DeleteRoundedIcon} title='Categorías' />
 			</div>
-		</aside>
+		</Container>
 	);
 };
 
