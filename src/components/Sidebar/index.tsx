@@ -1,6 +1,6 @@
 import { Button } from "./style.js";
 import AddIcon from "@mui/icons-material/Add";
-import SidebarItem from "../SidebarItem";
+import SidebarItem from "./SidebarItem";
 import InboxIcon from "@mui/icons-material/Inbox";
 import StarIcon from "@mui/icons-material/Star";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
